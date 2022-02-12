@@ -1,9 +1,12 @@
 # SimulatorGUI
 
-I built this project using the Angular (typescript) framework. The interface represents a quick proof of concept displaying several UX techniques for a technical skill test I'm taking. The time limit I've set for myself was 4~5 hours(not considering writing the documentation). Due to this time constraint, the end product doesn't represent a full-fledged functional interface.
+I built this project using the Angular (typescript) framework. The interface represents a quick proof of concept displaying several UX techniques for a technical skill test I'm taking. The time limit I've set for myself was 4~5 hours(not considering writing the documentation). Due to this time constraint, the end product is a demo aimed at the interface/experience without too much backend magic.
 
 You're able to view the project at:
 https://bitsanddroids.github.io/simulatorGUI/
+
+## Installation
+Angular is a Javascript/Typescript framework that lets you create dynamic web applications. These can be hosted on any web hosting server that supports node.js applications. A local installation might be a better option to interface with the simulator directly. This approach requires a local webserver to run the application. Updating / installing the application could be reduced to a single drag and drop action. Place the build files into the web server's directory, and you're ready for take-off. Depending on the needs of the client/the software bundle, we could assemble a tailored solution to make the installation as easy as possible.
 
 # Start screen
 ![start screen](https://github.com/BitsAndDroids/simulatorGUI/blob/main/src/assets/startScreen.jpg?raw=true)
