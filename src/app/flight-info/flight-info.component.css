@@ -1,0 +1,20 @@
+.sim-label {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.content-block {
+  margin: 0 14px;
+}
+
+.mat-card-content {
+  display: flex;
+  flex-flow: row;
+}
+
+.flight-info {
+  display: flex;
+  flex-flow: row;
+}
+
+/*# sourceMappingURL=flight-info.component.css.map */

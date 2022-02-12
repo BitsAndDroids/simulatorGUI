@@ -1,0 +1,40 @@
+.edit-container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+mat-card{
+  width: 40%;
+}
+mat-select{
+  z-index: 99999;
+
+}
+mat-form-field{
+  margin: 0 28px 0 14px;
+}
+mat-option{
+  z-index: 99999;
+}
+.runway{
+  transition: stroke 0.5s ease-in-out;
+}
+.runway:hover{
+  animation: str;
+  stroke: black;
+}
+.runway-selector{
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+
+}
+.runway-selector p{
+  font-weight: bold;
+  font-size: 3em;
+  margin-left: 14px;
+}
+

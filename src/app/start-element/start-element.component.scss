@@ -1,0 +1,15 @@
+mat-card{
+  width: 30%;
+  margin:14px auto;
+  top:0;
+}
+.main{
+  z-index: 1;
+}
+
+app-edit-screen{
+  position: absolute;
+  z-index: 9999;
+  height: 100vh;
+  top: 0;
+}

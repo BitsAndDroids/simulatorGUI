@@ -1,0 +1,45 @@
+<div class="edit-container">
+  <mat-card>
+    <mat-card-title>Edit procedure</mat-card-title>
+
+    <mat-card-content>
+      <div class = "runway-selector">
+      <mat-form-field appearance="fill">
+        <mat-label>Select an airport</mat-label>
+        <mat-select [(value)]="selectedAirport">
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let airport of airports" [value]="airport">{{airport}}</mat-option>
+        </mat-select>
+
+
+      </mat-form-field>
+        <mat-form-field>
+          <mat-label>Select a procedure</mat-label>
+          <mat-select [(value)]="selectedProcedure">
+            <mat-option>None</mat-option>
+            <mat-option *ngFor="let procedure of procedures" [value]="procedure">{{procedure}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="149.87" height="186.047" viewBox="0 0 149.87 186.047">
+          <line  class="runway" #rwy0 id="18r36l" data-name="18r36l" x1="3.702" y2="85.876" transform="translate(2.997 0.129)" fill="none"
+                stroke="#23770B" stroke-width="6" (click)='changeRunway("18R",rwy0.id)'/>
+          <line class="runway" #rwy1 id="18c36l" data-name="18c36l" x1="3.208" y2="63.42" transform="translate(46.675 79.342)" fill="none"
+                stroke="#707070" stroke-width="6" (click)='changeRunway("36L",rwy1.id)'/>
+          <line class="runway" #rwy2 id="279" data-name="279" x1="77.239" y2="4.195" transform="translate(60.988 111.176)" fill="none"
+                stroke="#707070" stroke-width="6" (click)='changeRunway("27",rwy2.id)'/>
+          <line class="runway" #rwy3 id="18l36r" data-name="18l36r" x1="3.702" y2="74.524" transform="translate(107.381 103.772)" fill="none"
+                stroke="#707070" stroke-width="6" (click)='changeRunway("18L",rwy3.id)'/>
+          <line class="runway" #rwy4 id="2224" data-name="" x1="29.119" y2="33.561" transform="translate(118.485 122.28)" fill="none"
+                stroke="#707070" stroke-width="6" (click)='changeRunway("22",rwy4.id)'/>
+          <line class="runway" #rwy5 id="0624" data-name="0624" y1="33.85" x2="56.036" transform="translate(43.961 149.629)" fill="none"
+                stroke="#707070" stroke-width="6" (click)='changeRunway("24",rwy5.id)'/>
+        </svg>
+        <p>{{selectedRunway}}</p>
+      </div>
+
+
+    </mat-card-content>
+    <button mat-raised-button (click)="toggleOpen()">SAVE</button>
+  </mat-card>
+</div>
