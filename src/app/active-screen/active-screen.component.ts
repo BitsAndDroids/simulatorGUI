@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FlightInfoService} from "../flight-info.service";
 
 @Component({
   selector: 'app-active-screen',
@@ -7,12 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActiveScreenComponent implements OnInit {
   ETA: string = " 10:20";
-
+  departureAirport : string = this.flightInfoService.getAirport();
   progress: number = 0;
   hours: number = 10;
   minutes: number = 20;
   totalMinutes : number = this.hours * 60 + this.minutes;
-  constructor() { }
+  constructor(private flightInfoService: FlightInfoService) { }
 
   ngOnInit(): void {
     const progressEveryTick = this.totalMinutes / 1000;

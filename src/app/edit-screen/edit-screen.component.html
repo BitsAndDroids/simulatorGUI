@@ -7,7 +7,6 @@
       <mat-form-field appearance="fill">
         <mat-label>Select an airport</mat-label>
         <mat-select #airport [(value)]="selectedAirport" (selectionChange)="changeAirport(airport.value)">
-          <mat-option>None</mat-option>
           <mat-option *ngFor="let airport of airports" [value]="airport">{{airport}}</mat-option>
         </mat-select>
 
@@ -16,7 +15,6 @@
         <mat-form-field>
           <mat-label>Select a procedure</mat-label>
           <mat-select #procedure [(value)]="selectedProcedure" (selectionChange)="changeProcedure(procedure.value)">
-            <mat-option>None</mat-option>
             <mat-option *ngFor="let procedure of procedures" [value]="procedure">{{procedure}}</mat-option>
           </mat-select>
         </mat-form-field>
@@ -40,6 +38,6 @@
 
 
     </mat-card-content>
-    <button mat-raised-button color="primary" (click)="toggleOpen()">SAVE</button>
+    <button mat-raised-button color="primary" (click)="saveSettings()">SAVE</button>
   </mat-card>
 </div>

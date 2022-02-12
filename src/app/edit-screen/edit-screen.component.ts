@@ -11,7 +11,7 @@ import {FlightInfoService} from "../flight-info.service";
 export class EditScreenComponent implements OnInit {
   //Hardcoded lists can be replaced by databases/files in the future
   airports : string[] = ["EHAM", "EDDL","EHVN"];
-  procedures : string[] = ["Dry take-off","Wet take-off","Engine failure takeoff","Circuit"];
+  procedures : string[] = ["Dry takeoff","Wet takeoff","Engine faillure takeoff","Circuit"];
 
   //These are the pre-selected variables showing in the HTML
   selectedAirport : string = this.flightInfoService.getAirport();
@@ -46,12 +46,10 @@ export class EditScreenComponent implements OnInit {
     this.selectedProcedure = procedure;
   }
 
-  toggleOpen(){
-    console.log(this.selectedAirport);
+  saveSettings(){
     this.flightInfoService.setAirport(this.selectedAirport);
     this.flightInfoService.setRunway(this.selectedRunway);
     this.flightInfoService.setProcedureSelected(this.selectedProcedure);
-    console.log(this.flightInfoService.getAirport());
     this.overlayService.toggleOpen();
   }
 }

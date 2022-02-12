@@ -20,4 +20,12 @@ mat-card {
   font-weight: bolder;
 }
 
+mat-card-title {
+  margin-bottom: 28px;
+}
+
+button {
+  margin-top: 14px;
+}
+
 /*# sourceMappingURL=active-screen.component.css.map */
