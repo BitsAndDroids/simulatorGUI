@@ -28,3 +28,4 @@ While the flight is active you're able to see some basic information like your E
 
 # Note
 In retrospect one of the things I'd do different is package the flight information in a single class. Currently I've implemented a getter/setter/subscriber for every variable. To reduce boilerplate code I'd rather add getters and setters to the class but add the subscribe functionality to the overall class.
+While the runway selection image is a nice piece of eye candy it still requires some adjustments. Visual queues like runway numbering and a mobile friendly approach could add value to the interaction.
