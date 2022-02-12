@@ -12,6 +12,7 @@ export class StartElementComponent implements OnInit {
   showSettings: boolean = false;
 
   constructor(private overlayService: OverlayServiceService) {
+    //By subscribing to the value we'll receive the changes to the overlayVisibility stored in the service.
     this.overlayService.settingsVisibility.subscribe((value)=>{
       this.showSettings = value;
     })

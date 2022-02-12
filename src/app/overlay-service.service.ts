@@ -5,6 +5,8 @@ import {Subject} from "rxjs";
   providedIn: 'root'
 })
 export class OverlayServiceService {
+  //Putting this logic in a service enables us to access the settings menu state from different elements
+  //This way we're able to open and close the settings overlay from the home screen and the settings overlay itself
   open = false;
   settingsVisibility: Subject<boolean> = new Subject<boolean>();
   public  setOpen(toSet:boolean){
