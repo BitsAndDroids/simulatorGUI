@@ -6,7 +6,7 @@ import {Subject} from "rxjs";
 })
 export class FlightInfoService {
   airportSelected = "EHAM";
-  runwaySelected = "36R";
+  runwaySelected = "18R";
   procedureSelected = "Dry take-off";
   procedureSelectedSet: Subject<string> = new Subject<string>();
   airportSelectedSet: Subject<string> = new Subject<string>();

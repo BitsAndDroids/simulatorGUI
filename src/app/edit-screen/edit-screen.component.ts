@@ -23,6 +23,7 @@ export class EditScreenComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.changeRunway(this.selectedRunway,this.selectedRunway);
   }
 
   changeRunway(runway: string, id: string){
