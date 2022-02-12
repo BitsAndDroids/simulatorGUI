@@ -1,0 +1,18 @@
+.active-screen-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+mat-card{
+  width: 40%;
+}
+.flight-progress{
+  display: flex;
+}
+.ICAO, .active-info{
+  margin: 7px;
+  font-weight: bolder;
+}

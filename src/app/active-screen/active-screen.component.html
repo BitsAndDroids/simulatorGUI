@@ -1,0 +1,15 @@
+<div class="active-screen-container">
+  <mat-card>
+    <app-flight-info></app-flight-info>
+    <div class='flight-progress'><p class="ICAO">EHAM
+    </p>
+      <mat-progress-bar [value]="progress"></mat-progress-bar>
+      <p class="ICAO">EDDL
+      </p>
+    </div>
+    <p class="active-info">
+      ETA:{{ETA}}
+    </p>
+    <button mat-raised-button color="warn" routerLink="/start-screen">LEAVE FLIGHT</button>
+  </mat-card>
+</div>

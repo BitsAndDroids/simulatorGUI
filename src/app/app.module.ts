@@ -16,6 +16,8 @@ import {MatExpansionModule} from "@angular/material/expansion";
 import {MatSelectModule} from "@angular/material/select";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import { FlightInfoComponent } from './flight-info/flight-info.component';
+import { ActiveScreenComponent } from './active-screen/active-screen.component';
+import {MatProgressBarModule} from "@angular/material/progress-bar";
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,8 @@ import { FlightInfoComponent } from './flight-info/flight-info.component';
     LandingGraphComponent,
     LoadingScreenComponent,
     EditScreenComponent,
-    FlightInfoComponent
+    FlightInfoComponent,
+    ActiveScreenComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ import { FlightInfoComponent } from './flight-info/flight-info.component';
     MatButtonModule,
     MatExpansionModule,
     MatSelectModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatProgressBarModule
   ],
   providers: [OverlayServiceService],
   bootstrap: [AppComponent]

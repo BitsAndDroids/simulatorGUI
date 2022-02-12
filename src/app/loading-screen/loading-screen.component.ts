@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Timestamp} from "rxjs/internal-compatibility";
 import {count, delay} from "rxjs/operators";
 import {async} from "rxjs";
+import {Router, RouterModule} from "@angular/router";
 
 @Component({
   selector: 'app-loading-screen',
@@ -13,7 +14,7 @@ export class LoadingScreenComponent implements OnInit {
   loadingFillStrings: string[] = ["Connecting external power unit", "Coupling jet way","Registering flight plan","Loading in cargo","Performing walk-around"];
   progress: number = 0;
 
-  constructor() {
+  constructor(private router: Router) {
           var counter: number = 0;
 
           //By using an interval we enhance the feeling of progress.
@@ -29,6 +30,7 @@ export class LoadingScreenComponent implements OnInit {
             this.loadingFill = this.loadingFillStrings[counter];
             if(this.progress == 100){
               clearInterval(interval);
+              this.router.navigate(['/active-screen']);
             }
           }, 1000);
 
