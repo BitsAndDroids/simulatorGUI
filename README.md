@@ -25,3 +25,6 @@ Booting up any sim can take a while. Nothing causes more frustration than pressi
 # Active screen
 ![loading spinner](https://github.com/BitsAndDroids/simulatorGUI/blob/main/src/assets/activeScreen.jpg?raw=true)
 While the flight is active you're able to see some basic information like your ETA. The ETA is also displayed in a progress bar to give a quick overview of the current position. If the user wants to abort the sesion they can press the LEAVE FLIGHT button. In a future itteration this would trigger a pop up to ensure that the user doesn't cancle the session on accident.
+
+# Note
+In retrospect one of the things I'd do different is package the flight information in a single class. Currently I've implemented a getter/setter/subscriber for every variable. To reduce boilerplate code I'd rather add getters and setters to the class but add the subscribe functionality to the overall class.
