@@ -25,12 +25,11 @@ mat-option {
 }
 
 .runway {
-  transition: stroke 0.5s ease-in-out;
+  transition: stroke 0.3s ease-in-out;
 }
 
 .runway:hover {
-  animation: str;
-  stroke: black;
+  stroke: black !important;
 }
 
 .runway-selector {

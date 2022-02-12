@@ -34,6 +34,7 @@ export class EditScreenComponent implements OnInit {
     for(var i = 0; i < rwys.length; i++){
       // @ts-ignore
       rwys[i].style.stroke="#707070";
+
     }
     // @ts-ignore
     document.getElementById(id).style.stroke = "#23770B";
