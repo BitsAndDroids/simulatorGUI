@@ -15,13 +15,19 @@ export class ActiveScreenComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    var everyTick = this.totalMinutes / 100;
-    var counter:number = 0;
+    const progressEveryTick = this.totalMinutes / 1000;
+    let counter:number = 0;
     const interval = setInterval(() =>{
-      this.progress+=1;
-      this.totalMinutes -= everyTick;
+      this.progress+=0.1;
+      this.totalMinutes -= progressEveryTick;
       this.hours = this.totalMinutes / 60;
       this.minutes = this.totalMinutes % 60;
+      if(this.hours < 0){
+        this.hours = 0;
+      }
+      if(this.minutes < 0){
+        this.minutes = 0;
+      }
       this.ETA = ((this.hours >= 10) ?" " :" 0") + Math.floor(this.hours) + ((this.minutes >= 10) ?":" :":0") + Math.floor(this.minutes);
       counter++;
       //To entertain the user with some quirky lines these will be altered each interval as well.
@@ -29,7 +35,7 @@ export class ActiveScreenComponent implements OnInit {
       if(this.progress == 100){
         clearInterval(interval);
       }
-    }, 1000);
+    }, 100);
   }
 
 }

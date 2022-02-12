@@ -18,6 +18,7 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import { FlightInfoComponent } from './flight-info/flight-info.component';
 import { ActiveScreenComponent } from './active-screen/active-screen.component';
 import {MatProgressBarModule} from "@angular/material/progress-bar";
+import {FlightInfoService} from "./flight-info.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,7 @@ import {MatProgressBarModule} from "@angular/material/progress-bar";
     MatProgressSpinnerModule,
     MatProgressBarModule
   ],
-  providers: [OverlayServiceService],
+  providers: [OverlayServiceService, FlightInfoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

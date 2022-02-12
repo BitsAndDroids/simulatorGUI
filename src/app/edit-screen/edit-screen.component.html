@@ -6,7 +6,7 @@
       <div class = "runway-selector">
       <mat-form-field appearance="fill">
         <mat-label>Select an airport</mat-label>
-        <mat-select [(value)]="selectedAirport">
+        <mat-select #airport [(value)]="selectedAirport" (selectionChange)="changeAirport(airport.value)">
           <mat-option>None</mat-option>
           <mat-option *ngFor="let airport of airports" [value]="airport">{{airport}}</mat-option>
         </mat-select>
@@ -15,7 +15,7 @@
       </mat-form-field>
         <mat-form-field>
           <mat-label>Select a procedure</mat-label>
-          <mat-select [(value)]="selectedProcedure">
+          <mat-select #procedure [(value)]="selectedProcedure" (selectionChange)="changeProcedure(procedure.value)">
             <mat-option>None</mat-option>
             <mat-option *ngFor="let procedure of procedures" [value]="procedure">{{procedure}}</mat-option>
           </mat-select>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {OverlayServiceService} from "../overlay-service.service";
+import {FlightInfoService} from "../flight-info.service";
 
 
 @Component({
@@ -13,11 +14,11 @@ export class EditScreenComponent implements OnInit {
   procedures : string[] = ["Dry take-off","Wet take-off","Engine failure takeoff","Circuit"];
 
   //These are the pre-selected variables showing in the HTML
-  selectedAirport : string = "EHAM";
-  selectedProcedure : string = "Dry take-off";
-  selectedRunway : string = "18R";
+  selectedAirport : string = this.flightInfoService.getAirport();
+  selectedProcedure : string = this.flightInfoService.getProcedure();
+  selectedRunway : string = this.flightInfoService.getRunway();
 
-  constructor(private overlayService:OverlayServiceService) {
+  constructor(private overlayService:OverlayServiceService, private flightInfoService:FlightInfoService) {
 
   }
 
@@ -37,8 +38,19 @@ export class EditScreenComponent implements OnInit {
     document.getElementById(id).style.stroke = "#23770B";
 
   }
+  changeAirport(airport: string){
+    this.selectedAirport = airport;
+  }
+  changeProcedure(procedure : string){
+    this.selectedProcedure = procedure;
+  }
 
   toggleOpen(){
+    console.log(this.selectedAirport);
+    this.flightInfoService.setAirport(this.selectedAirport);
+    this.flightInfoService.setRunway(this.selectedRunway);
+    this.flightInfoService.setProcedureSelected(this.selectedProcedure);
+    console.log(this.flightInfoService.getAirport());
     this.overlayService.toggleOpen();
   }
 }
